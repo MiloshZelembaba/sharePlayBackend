@@ -1,0 +1,12 @@
+To dev locally:
+
+start virtual env
+- 'cd shareplay_backend'
+- 'source env/bin/activate'
+
+start connection to sql DB, in another tab:
+- in 'shareplay_backlend'
+- './cloud_sql_proxy -instances="shareplay-204722:us-east4:polls-instance"=tcp:3306'
+
+to connect to db, in another tab:
+- mysql --host 127.0.0.1 --user root --password

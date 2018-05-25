@@ -1,0 +1,11 @@
+certifi==2018.4.16
+chardet==3.0.4
+Django==1.11.13
+django-ipware==2.1.0
+idna==2.6
+PyMySQL==0.8.1
+pytz==2018.4
+requests==2.18.4
+requests-toolbelt==0.8.0
+urlfetch==1.0.3
+urllib3==1.22
