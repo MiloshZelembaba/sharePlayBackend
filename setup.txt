@@ -10,3 +10,6 @@ start connection to sql DB, in another tab:
 
 to connect to db, in another tab:
 - mysql --host 127.0.0.1 --user root --password
+
+
+IMPORTANT: make sure to follow the android app steps to dev locally to make sure the app is pointing towards your locally hosted server
