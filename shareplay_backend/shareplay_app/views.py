@@ -99,6 +99,9 @@ def getEmailAddress(request):
     milosh = User.objects.get(first_name="Milosh")
     return HttpResponse(milosh.email)
 
+def success(request):
+    return HttpResponse("success")
+
 def test(request):
     import socket
     socket.gethostbyname(socket.gethostname())

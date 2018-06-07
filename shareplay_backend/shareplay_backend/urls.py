@@ -30,4 +30,5 @@ urlpatterns = [
     url(r'^updateNetworkInfo/', shareplay_views.updateNetworkInfo, name='updateNetworkInfo'),
     url(r'^updateFCMRefreshToken/', shareplay_views.updateFCMRefreshToken, name='updateFCMRefreshToken'),
     url(r'^test/', shareplay_views.test, name='test'),
+    url(r'^success/', shareplay_views.success, name='success'),
 ]
