@@ -45,7 +45,7 @@ class Party(models.Model):
         return songs
 
     def get_party_members(self):
-        party_members = Party.objects.filter(current_party=self)
+        party_members = User.objects.filter(current_party_id=self.id)
         party_members = [member.to_dict() for member in party_members]
 
         return party_members
@@ -53,7 +53,7 @@ class Party(models.Model):
     def to_dict(self, addSongs=False):
         _dict = {}
         _dict['id'] = self.id
-        _dict['name'] = self.name
+        _dict['party_name'] = self.name
         _dict['host'] = self.host.to_dict()
         _dict['current_song_uri'] = self.current_song_uri
         _dict['party_members'] = self.get_party_members()

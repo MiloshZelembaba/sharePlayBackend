@@ -99,11 +99,7 @@ def getEmailAddress(request):
     milosh = User.objects.get(first_name="Milosh")
     return HttpResponse(milosh.email)
 
-
-def initMilosh(request):
-    milosh = User(display_name="hello", email="miroslav.zelembaba@gmail.com", address="nothing yet", port=0)
-    milosh.save()
-    return HttpResponse("Success")
-
-    # milosh = User(first_name="mike", last_name="dantoni", email="mikedantoni@gmail.com", password="fire")
-    # milosh.save()
+def test(request):
+    import socket
+    socket.gethostbyname(socket.gethostname())
+    return HttpResponse(socket.gethostbyname(socket.gethostname()))

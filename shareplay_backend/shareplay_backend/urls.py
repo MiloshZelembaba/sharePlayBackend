@@ -29,5 +29,5 @@ urlpatterns = [
     url(r'^removeSongFromParty/', shareplay_views.removeSongFromParty, name='removeSongFromParty'),
     url(r'^updateNetworkInfo/', shareplay_views.updateNetworkInfo, name='updateNetworkInfo'),
     url(r'^updateFCMRefreshToken/', shareplay_views.updateFCMRefreshToken, name='updateFCMRefreshToken'),
-    url(r'^initMilosh/', shareplay_views.initMilosh, name='initMilosh'),
+    url(r'^test/', shareplay_views.test, name='test'),
 ]
