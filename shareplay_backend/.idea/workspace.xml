@@ -11,56 +11,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shareplay_app/models.py">
+      <file leaf-file-name="LoginHandler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LoginHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="56" column="38" lean-forward="false" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LeavePartyHandler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LeavePartyHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shareplay_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="101" column="11" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="11" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="38" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shareplay_backend/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreatePartyHandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/CreatePartyHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetPartyDetailsHandler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/GetPartyDetailsHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -93,11 +69,11 @@
         <option value="$PROJECT_DIR$/shareplay_app/handlers/UpdateFCMTokenHandler.py" />
         <option value="$PROJECT_DIR$/shareplay_app/ClientRequests/NotifyPartyUpdated.py" />
         <option value="$PROJECT_DIR$/shareplay_app/ClientRequests/NotifyHostSwitch.py" />
-        <option value="$PROJECT_DIR$/shareplay_app/handlers/LoginHandler.py" />
         <option value="$PROJECT_DIR$/shareplay_app/models.py" />
         <option value="$PROJECT_DIR$/shareplay_app/ClientRequests/request.py" />
         <option value="$PROJECT_DIR$/shareplay_app/views.py" />
         <option value="$PROJECT_DIR$/shareplay_backend/urls.py" />
+        <option value="$PROJECT_DIR$/shareplay_app/handlers/LoginHandler.py" />
       </list>
     </option>
   </component>
@@ -136,12 +112,7 @@
               <item name="shareplay_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="shareplay_backend" type="462c0819:PsiDirectoryNode" />
               <item name="shareplay_app" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientRequests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shareplay_backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shareplay_backend" type="462c0819:PsiDirectoryNode" />
-              <item name="shareplay_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,13 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LeavePartyHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="22" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/UpdateFCMTokenHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -408,13 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LoginHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -464,8 +421,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shareplay_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="101" column="11" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="11" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LeavePartyHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shareplay_app/handlers/LoginHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>

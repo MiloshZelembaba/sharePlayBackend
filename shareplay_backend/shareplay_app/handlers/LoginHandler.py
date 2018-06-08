@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 import json
 from shareplay_app.models import User
+import LeavePartyHandler
 
 
 def passOff(json_data):
@@ -17,7 +18,10 @@ def passOff(json_data):
 
     try:
         user = User.objects.get(email=email)
+
+        LeavePartyHandler.passOff(json_data)
         user.current_party_id = None
+
         user.display_name = display_name
         user.product = product_flavour
 
