@@ -4,6 +4,7 @@ from shareplay_app.models import User
 
 
 def passOff(json_data):
+    print(json_data)
     user_id = json_data['user']['id']
 
     user = None

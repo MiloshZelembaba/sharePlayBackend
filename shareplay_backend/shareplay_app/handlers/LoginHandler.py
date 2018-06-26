@@ -19,7 +19,7 @@ def passOff(json_data):
     try:
         user = User.objects.get(email=email)
 
-        LeavePartyHandler.passOff(json_data)
+        # LeavePartyHandler.passOff(json_data)
         user.current_party_id = None
 
         user.display_name = display_name
