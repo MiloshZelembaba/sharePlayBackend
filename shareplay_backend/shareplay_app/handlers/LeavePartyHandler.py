@@ -4,7 +4,6 @@ from shareplay_app.models import User
 
 
 def passOff(json_data):
-    print(json_data)
     user_id = json_data['user']['id']
 
     user = None
@@ -15,7 +14,8 @@ def passOff(json_data):
         user.save()
 
         if party is not None and user.id is party.host_id:  # this means the host is leaving the party
-            performPartySwitch(party, user)
+            print("whats up ")
+            #performPartySwitch(party, user)
 
 
     except User.DoesNotExist:

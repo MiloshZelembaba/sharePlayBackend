@@ -12,6 +12,7 @@ from handlers import LeavePartyHandler
 from handlers import RemoveSongFromPartyHandler
 from handlers import UpdateNetworkTemporary
 from handlers import UpdateFCMTokenHandler
+from handlers import RefreshSpotifyAccessTokenHandler
 import json
 
 def login(request):
@@ -92,6 +93,13 @@ def updateFCMRefreshToken(request):
         UpdateNetworkTemporary.updateNetworkInfo(request)
         received_json_data = json.loads(request.body.decode("utf-8"))
         return UpdateFCMTokenHandler.passOff(received_json_data)
+    else:
+        return HttpResponse("poop")
+
+def refreshSpotifyAccessToken(request):
+    if request.method == "POST":
+        received_json_data = json.loads(request.body.decode("utf-8"))
+        return RefreshSpotifyAccessTokenHandler.passOff(received_json_data)
     else:
         return HttpResponse("poop")
 

@@ -20,10 +20,11 @@ def send_using_fcm(data, fcm_token):
     # fix this to not hardcode the API key
     headers = {'Content-Type': 'application/json', 'Authorization': 'key=AAAA6v_4v3I:APA91bEh9-JDKVAZlA7VSSng9wYiF1TMu9ydUwZk6MtWTsAsraQ0x4uDWP1khfxqX6QfQecTte14K8fcz7iZ9ufYamPE5CthCJZO-gqDuDbrVH8q57AaLEicDc1mfcbgkfhmOYjIfLYD'}
     # requests.post(url, data=json.dumps(body), headers=headers)
+    # print(fcm_token)
     result = post(url,
                   headers=headers,
                   data=json.dumps(body))
-
+    #
     # import pdb;
     # pdb.set_trace()
     # print(result)

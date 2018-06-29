@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^updateFCMRefreshToken/', shareplay_views.updateFCMRefreshToken, name='updateFCMRefreshToken'),
     url(r'^test/', shareplay_views.test, name='test'),
     url(r'^success/', shareplay_views.success, name='success'),
+    url(r'^refreshSpotifyAccessToken/', shareplay_views.refreshSpotifyAccessToken, name='refreshSpotifyAccessToken'),
 ]

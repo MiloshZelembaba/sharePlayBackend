@@ -8,13 +8,33 @@ from ClientRequests import NotifyPartyUpdated
 
 
 def passOff(json_data):
-    song_id = json_data['song']['id']
+
+    song_id = None
+
+    if 'song' in json_data:
+        song_id = json_data['song']['id']
 
     party = None
     try:
-        song = Song.objects.get(id=song_id)
-        party = song.party
-        song.delete()
+        if song_id is not None:
+            song = Song.objects.get(id=song_id)
+            party = song.party
+            party.current_song_uri = json_data['song']['uri']
+            party.current_song_name = json_data['song']['song_name']
+            party.current_song_artists = json_data['song']['artists']
+            party.current_song_imageUrl = json_data['song']['image_url']
+            party.save()
+            song.delete()
+        else: ## when song is None, we pass in the partyId from the client
+            party_id = json_data['party_id']
+            party = Party.objects.get(id=int(party_id))
+            party.current_song_uri = ""
+            party.current_song_name = ""
+            party.current_song_artists = ""
+            party.current_song_imageUrl = ""
+            party.save()
+
+
     except Song.DoesNotExist:
         return HttpResponse("Object does't exist", content_type='application/json', status=418)
 

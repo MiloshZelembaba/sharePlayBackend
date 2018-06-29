@@ -6,7 +6,8 @@ class User(models.Model):
     last_name = models.CharField(max_length=30, null=True)
     display_name = models.CharField(max_length=50, null=False)
     product = models.CharField(max_length=100, null=True)
-    fcm_token = models.CharField(max_length=300,null=True)
+    fcm_token = models.CharField(max_length=300, null=True)
+    spotify_refresh_token = models.CharField(max_length=300, null=True)
     email = models.CharField(max_length=100, null=False)
     password = models.CharField(max_length=30, null=True)
     last_login = models.DateField(null=True)
@@ -25,6 +26,7 @@ class User(models.Model):
         _dict["last_login"] = self.last_login
         _dict["display_name"] = self.display_name
         _dict["product"] = self.product
+        _dict["spotify_refresh_token"] = self.spotify_refresh_token
         # _dict["current_party"] = self.current_party
 
         return _dict
@@ -32,7 +34,10 @@ class User(models.Model):
 class Party(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, null=False)
-    current_song_uri = models.CharField(max_length=100, null=True)
+    current_song_uri = models.CharField(max_length=300, null=True)
+    current_song_name = models.CharField(max_length=300, null=True)
+    current_song_artists = models.CharField(max_length=300, null=True)
+    current_song_imageUrl = models.CharField(max_length=300, null=True)
     host = models.ForeignKey(
                 'User',
                 null=False,
@@ -56,6 +61,9 @@ class Party(models.Model):
         _dict['party_name'] = self.name
         _dict['host'] = self.host.to_dict()
         _dict['current_song_uri'] = self.current_song_uri
+        _dict['current_song_name'] = self.current_song_name
+        _dict['current_song_artists'] = self.current_song_artists
+        _dict['current_song_imageUrl'] = self.current_song_imageUrl
         _dict['party_members'] = self.get_party_members()
 
         if addSongs:

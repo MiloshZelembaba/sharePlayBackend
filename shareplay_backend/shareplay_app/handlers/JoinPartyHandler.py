@@ -11,6 +11,7 @@ def passOff(json_data):
     user = None
     try:
         user = User.objects.get(id=user_id)
+        print(int(party_id))
         party = Party.objects.get(id=int(party_id))
         user.current_party = party
         user.save()

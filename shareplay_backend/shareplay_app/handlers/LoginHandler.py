@@ -7,6 +7,7 @@ import LeavePartyHandler
 def passOff(json_data):
     email = json_data['email']
     product_flavour = json_data['product']
+    spotify_refresh_token=json_data['spotify_refresh_token']
 
     display_name = ""
     if 'display_name' in json_data:
@@ -21,7 +22,7 @@ def passOff(json_data):
 
         # LeavePartyHandler.passOff(json_data)
         user.current_party_id = None
-
+        user.spotify_refresh_token = spotify_refresh_token
         user.display_name = display_name
         user.product = product_flavour
 
@@ -31,7 +32,8 @@ def passOff(json_data):
         user.save()
         data = user.to_dict()
     except User.DoesNotExist:
-        new_user = User(display_name=display_name, email=email, address="nothing yet", port=0, product=product_flavour)
+        new_user = User(display_name=display_name, email=email, address="nothing yet",
+                        port=0, product=product_flavour, spotify_refresh_token=spotify_refresh_token)
 
         if refresh_token is not None:
             new_user.fcm_token = refresh_token
