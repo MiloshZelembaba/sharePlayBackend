@@ -7,7 +7,10 @@ import LeavePartyHandler
 def passOff(json_data):
     email = json_data['email']
     product_flavour = json_data['product']
-    spotify_refresh_token=json_data['spotify_refresh_token']
+
+    spotify_refresh_token = None
+    if 'spotify_refresh_token' in json_data:
+        spotify_refresh_token=json_data['spotify_refresh_token']
 
     display_name = ""
     if 'display_name' in json_data:
