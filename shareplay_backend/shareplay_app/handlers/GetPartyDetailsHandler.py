@@ -6,7 +6,6 @@ from shareplay_app.models import Party
 def passOff(json_data):
     party_id = json_data['party_id']
 
-    party = None
     try:
         party = Party.objects.get(id=party_id)
     except Party.DoesNotExist:

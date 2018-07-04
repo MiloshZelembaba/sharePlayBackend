@@ -6,18 +6,14 @@ from shareplay_app.models import User
 def passOff(json_data):
     user_id = json_data['user']['id']
 
-    user = None
     try:
         user = User.objects.get(id=user_id)
-        party = user.current_party
+        # party = user.current_party
         user.current_party = None
         user.save()
 
-        if party is not None and user.id is party.host_id:  # this means the host is leaving the party
-            print("whats up ")
-            #performPartySwitch(party, user)
-
-
+        # if party is not None and user.id is party.host_id:  # this means the host is leaving the party
+        #     performPartySwitch(party, user)
     except User.DoesNotExist:
         return HttpResponse("Object does't exist", content_type='application/json', status=418)
 
