@@ -28,19 +28,14 @@ def passOff(json_data):
         user.spotify_refresh_token = spotify_refresh_token
         user.display_name = display_name
         user.product = product_flavour
-
-        if refresh_token is not None:
-            user.fcm_token = refresh_token
+        user.fcm_token = refresh_token
 
         user.save()
         data = user.to_dict()
     except User.DoesNotExist:
         new_user = User(display_name=display_name, email=email, address="nothing yet",
                         port=0, product=product_flavour, spotify_refresh_token=spotify_refresh_token)
-
-        if refresh_token is not None:
-            new_user.fcm_token = refresh_token
-
+        new_user.fcm_token = refresh_token
         new_user.save()
         data = new_user.to_dict()
 
