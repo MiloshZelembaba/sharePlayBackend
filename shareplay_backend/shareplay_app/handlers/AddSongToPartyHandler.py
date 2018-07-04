@@ -14,7 +14,6 @@ def passOff(json_data):
 
     party = Party.objects.get(id=party_id)
     user = User.objects.get(id=user_id)
-
     result = addMultipleSongs(jsonArray, user, party)
     if result is not 0:  # this is when addMultipleSongs errors out
         return result
@@ -31,7 +30,7 @@ def passOff(json_data):
 
 @transaction.atomic
 def addMultipleSongs(jsonArray, user, party):
-    if user.current_party != party:
+    if user.current_party.id != party.id:
         return HttpResponse("Can't add songs to a party your not in", content_type='application/json', status=418)
 
     for song in jsonArray:

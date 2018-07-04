@@ -15,8 +15,8 @@ def passOff(json_data):
             return HttpResponse("User already in party", content_type='application/json', status=418)
 
         party = Party(name=party_name, host=user)
-        user.current_party = party
         party.save()
+        user.current_party = party
         user.save()
     except User.DoesNotExist:
         return HttpResponse("Object does't exist", content_type='application/json', status=418)
