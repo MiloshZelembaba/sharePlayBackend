@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from shareplay_app import views as shareplay_views
+from AuthenticationService import views as AutenticationViews
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -32,4 +33,10 @@ urlpatterns = [
     url(r'^test/', shareplay_views.test, name='test'),
     url(r'^success/', shareplay_views.success, name='success'),
     url(r'^refreshSpotifyAccessToken/', shareplay_views.refreshSpotifyAccessToken, name='refreshSpotifyAccessToken'),
+
+    #  AuthenticationService
+    url(r'^getAuthorizationCredentials/', AutenticationViews.get_auth_creds, name='get_auth_creds'),
+    url(r'^getAccessToken/', AutenticationViews.get_access_token, name='get_access_token'),
+    url(r'^attemptLogin/', AutenticationViews.attempt_login, name='attempt_login'),
+    url(r'^refreshAccessToken/', AutenticationViews.get_refreshed_access_token, name='get_refreshed_access_token'),
 ]

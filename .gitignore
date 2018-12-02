@@ -1,2 +1,5 @@
-shareplay_backend/.idea/workspace.xml
+shareplay_backend/.idea/*
 *.pyc
+.idea/
+shareplay_backend/env/*
+

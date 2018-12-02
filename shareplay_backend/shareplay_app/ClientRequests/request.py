@@ -1,8 +1,8 @@
 import socket
 import json
 import logging
-import requests
-import requests_toolbelt.adapters.appengine
+# import requests
+# import requests_toolbelt.adapters.appengine
 from urlfetch import post
 
 def send_request(data, fcm_token, port):

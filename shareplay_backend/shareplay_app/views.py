@@ -93,7 +93,6 @@ def refreshSpotifyAccessToken(request):
         return HttpResponse("poop")
 
 
-
 ### TESTING ENDPOINTS
 
 def getEmailAddress(request):
